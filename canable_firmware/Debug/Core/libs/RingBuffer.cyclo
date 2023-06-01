@@ -1,0 +1,3 @@
+RingBuffer.c:14:6:RingBuff_Ptr_Reset	1
+RingBuffer.c:22:6:RingBuff_Ptr_Input	5
+RingBuffer.c:41:6:RingBuff_Ptr_Output	3
