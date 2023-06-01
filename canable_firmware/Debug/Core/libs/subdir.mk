@@ -5,19 +5,28 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Core/libs/CAN_buffer.c \
+../Core/libs/GPIO_Ports.c \
 ../Core/libs/RingBuff.c \
 ../Core/libs/RingBuffer.c \
-../Core/libs/USB_Buffer.c 
+../Core/libs/USB_Buffer.c \
+../Core/libs/UsbAndCanConvert.c 
 
 OBJS += \
+./Core/libs/CAN_buffer.o \
+./Core/libs/GPIO_Ports.o \
 ./Core/libs/RingBuff.o \
 ./Core/libs/RingBuffer.o \
-./Core/libs/USB_Buffer.o 
+./Core/libs/USB_Buffer.o \
+./Core/libs/UsbAndCanConvert.o 
 
 C_DEPS += \
+./Core/libs/CAN_buffer.d \
+./Core/libs/GPIO_Ports.d \
 ./Core/libs/RingBuff.d \
 ./Core/libs/RingBuffer.d \
-./Core/libs/USB_Buffer.d 
+./Core/libs/USB_Buffer.d \
+./Core/libs/UsbAndCanConvert.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -27,7 +36,7 @@ Core/libs/%.o Core/libs/%.su Core/libs/%.cyclo: ../Core/libs/%.c Core/libs/subdi
 clean: clean-Core-2f-libs
 
 clean-Core-2f-libs:
-	-$(RM) ./Core/libs/RingBuff.cyclo ./Core/libs/RingBuff.d ./Core/libs/RingBuff.o ./Core/libs/RingBuff.su ./Core/libs/RingBuffer.cyclo ./Core/libs/RingBuffer.d ./Core/libs/RingBuffer.o ./Core/libs/RingBuffer.su ./Core/libs/USB_Buffer.cyclo ./Core/libs/USB_Buffer.d ./Core/libs/USB_Buffer.o ./Core/libs/USB_Buffer.su
+	-$(RM) ./Core/libs/CAN_buffer.cyclo ./Core/libs/CAN_buffer.d ./Core/libs/CAN_buffer.o ./Core/libs/CAN_buffer.su ./Core/libs/GPIO_Ports.cyclo ./Core/libs/GPIO_Ports.d ./Core/libs/GPIO_Ports.o ./Core/libs/GPIO_Ports.su ./Core/libs/RingBuff.cyclo ./Core/libs/RingBuff.d ./Core/libs/RingBuff.o ./Core/libs/RingBuff.su ./Core/libs/RingBuffer.cyclo ./Core/libs/RingBuffer.d ./Core/libs/RingBuffer.o ./Core/libs/RingBuffer.su ./Core/libs/USB_Buffer.cyclo ./Core/libs/USB_Buffer.d ./Core/libs/USB_Buffer.o ./Core/libs/USB_Buffer.su ./Core/libs/UsbAndCanConvert.cyclo ./Core/libs/UsbAndCanConvert.d ./Core/libs/UsbAndCanConvert.o ./Core/libs/UsbAndCanConvert.su
 
 .PHONY: clean-Core-2f-libs
 

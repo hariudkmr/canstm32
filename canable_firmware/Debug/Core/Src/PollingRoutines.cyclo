@@ -1,1 +1,10 @@
-PollingRoutines.c:15:6:PollingRoutine	1
+PollingRoutines.c:29:6:PollingRoutine	1
+PollingRoutines.c:44:6:BlinkkLed	8
+PollingRoutines.c:76:6:ParseUsbRec	6
+PollingRoutines.c:97:6:SendHardwareInfo	2
+PollingRoutines.c:108:6:SendVersionInfo	2
+PollingRoutines.c:119:6:SendFrequency	2
+PollingRoutines.c:130:6:Send_CAN_BTR	1
+PollingRoutines.c:148:6:ParseCanRec	3
+PollingRoutines.c:171:6:CanBusActivityStatus	1
+PollingRoutines.c:181:6:CanSnifferCanInit	3

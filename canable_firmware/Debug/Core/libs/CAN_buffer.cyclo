@@ -1,0 +1,5 @@
+CAN_buffer.c:24:5:SendCanTxMessage1	3
+CAN_buffer.c:37:6:AddCanTxBuffer1	2
+CAN_buffer.c:51:6:AddCanRxBuffer1	2
+CAN_buffer.c:69:9:Can1DataAvailable	3
+CAN_buffer.c:158:6:MsgCopy	2

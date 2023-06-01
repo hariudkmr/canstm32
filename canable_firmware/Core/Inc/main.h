@@ -31,7 +31,9 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "protocolCommands.h"
+#include "UsbAndCanConvert.h"
+#include "USB_Buffer.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
