@@ -1,0 +1,27 @@
+﻿<CANX>
+  <Created_by>CAN-X software by Karl Yamashita on 12/07/2019. (github.com/karlyamashita/CAN-X)</Created_by>
+  <Project_Filename>canx_settings.canx</Project_Filename>
+  <edit_tx_messages>
+    <edit_txMsg>
+      <Key>0</Key>
+      <Description>Test</Description>
+      <AutoTx>False</AutoTx>
+      <Rate>0</Rate>
+      <IDE>S</IDE>
+      <ArbID>0245</ArbID>
+      <RTR>False</RTR>
+      <DLC>8</DLC>
+      <Byte1>1</Byte1>
+      <Byte2>2</Byte2>
+      <Byte3>3</Byte3>
+      <Byte4>4</Byte4>
+      <Byte5>5</Byte5>
+      <Byte6>6</Byte6>
+      <Byte7>7</Byte7>
+      <Byte8>8</Byte8>
+      <Node>CAN1</Node>
+      <Notes />
+    </edit_txMsg>
+    <edit_rx_messages />
+  </edit_tx_messages>
+</CANX>

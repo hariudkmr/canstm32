@@ -6,6 +6,7 @@
 "./Core/Src/sysmem.o"
 "./Core/Src/system_stm32f4xx.o"
 "./Core/Startup/startup_stm32f407vgtx.o"
+"./Core/libs/CAN_Filter.o"
 "./Core/libs/CAN_buffer.o"
 "./Core/libs/GPIO_Ports.o"
 "./Core/libs/RingBuff.o"

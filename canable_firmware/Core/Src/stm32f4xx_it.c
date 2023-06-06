@@ -205,24 +205,17 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /**
-  * @brief This function handles EXTI line0 interrupt.
+  * @brief This function handles CAN1 TX interrupts.
   */
-void EXTI0_IRQHandler(void)
+void CAN1_TX_IRQHandler(void)
 {
-  /* USER CODE BEGIN EXTI0_IRQn 0 */
+  /* USER CODE BEGIN CAN1_TX_IRQn 0 */
 
-	for (int n=0;n<1000000;n++); //this loop is used to make a software delay, remove optimization for this to work
-	  if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0)) //check to ensure pin is pressed
-		{
-			a++; //increment a
-			HAL_CAN_AddTxMessage(&hcan1, &pHeader, &a, &TxMailbox);  //function to add message for transmition
-		}
+  /* USER CODE END CAN1_TX_IRQn 0 */
+  HAL_CAN_IRQHandler(&hcan1);
+  /* USER CODE BEGIN CAN1_TX_IRQn 1 */
 
-  /* USER CODE END EXTI0_IRQn 0 */
-  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_0);
-  /* USER CODE BEGIN EXTI0_IRQn 1 */
-
-  /* USER CODE END EXTI0_IRQn 1 */
+  /* USER CODE END CAN1_TX_IRQn 1 */
 }
 
 /**
@@ -234,10 +227,36 @@ void CAN1_RX0_IRQHandler(void)
 
   /* USER CODE END CAN1_RX0_IRQn 0 */
   HAL_CAN_IRQHandler(&hcan1);
-  /* USER CODE BEGIN CAN1_RX0_IRQn 1 */
-   HAL_CAN_GetRxMessage(&hcan1, CAN_RX_FIFO0, &pRxHeader, &r);
-    GPIOD->ODR=r<<12; //use output data register to turn on LED
+  CanBusActivityStatus(1);
   /* USER CODE END CAN1_RX0_IRQn 1 */
+}
+
+/**
+  * @brief This function handles CAN1 RX1 interrupt.
+  */
+void CAN1_RX1_IRQHandler(void)
+{
+  /* USER CODE BEGIN CAN1_RX1_IRQn 0 */
+
+  /* USER CODE END CAN1_RX1_IRQn 0 */
+  HAL_CAN_IRQHandler(&hcan1);
+  /* USER CODE BEGIN CAN1_RX1_IRQn 1 */
+  CanBusActivityStatus(1);
+  /* USER CODE END CAN1_RX1_IRQn 1 */
+}
+
+/**
+  * @brief This function handles CAN1 SCE interrupt.
+  */
+void CAN1_SCE_IRQHandler(void)
+{
+  /* USER CODE BEGIN CAN1_SCE_IRQn 0 */
+
+  /* USER CODE END CAN1_SCE_IRQn 0 */
+  HAL_CAN_IRQHandler(&hcan1);
+  /* USER CODE BEGIN CAN1_SCE_IRQn 1 */
+  CanBusActivityStatus(1);
+  /* USER CODE END CAN1_SCE_IRQn 1 */
 }
 
 /**
